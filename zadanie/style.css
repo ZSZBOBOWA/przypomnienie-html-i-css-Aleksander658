@@ -97,3 +97,14 @@ td {
 .left {
     text-align: left;
 }
+
+footer
+{
+    color: white;
+    text-decoration: none;
+}
+
+:hover footer
+{
+    text-decoration: underline;
+}
