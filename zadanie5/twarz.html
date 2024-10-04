@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon kosmetyczny</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <h2>Nasza oferta</h2>
+        <ol>
+            <li><a href="twarz.html">Oczyszczenie twarzy</a>
+                <ul>
+                    <li>Peeling</li>
+                    <li>Maska</li>
+                </ul>
+            </li>
+            <li>Masaż</li>
+            <li>Makijaż</li>
+        </ol>
+        <a href="index.html" class="odsyłacz">Strona główna</a>
+    </nav>
+    <header>
+        <h1>Usługi kosmetyczne</h1>
+    </header>
+    <main>
+        <form>
+        <br>
+        <h3>Kalkulator ceny wizyty</h3><br>
+        <div>
+            <input type="checkbox" id="peeling" name="peeling">
+            <label for="peeling">Peeling:</label>
+        </div>
+        <div>
+            <input type="checkbox" id="maska" name="maska">
+            <label for="maska">Maska:</label>
+        </div>
+        <div>
+            <input type="checkbox" id="masaż" name="masaż">
+            <label for="masaz">Masaż twarzy:</label>
+        </div>
+        <div>
+            <input type="checkbox" id="makijaz" name="makijaz">
+            <label for="makijaz">Makijaż:</label>
+        </div>
+        <button onclick="oblicz()">Oblicz cenę</button>
+        <p id="wypisz"></p>
+        </form>
+        <script>
+            function oblicz() {
+                let cena = 0;
+                if (document.getElementById("peeling").checked) {
+                    cena += 45;
+                }
+                if (document.getElementById("maska").checked) {
+                    cena += 30;
+                }
+                if (document.getElementById("masaż").checked) {
+                    cena += 20;
+                }
+                if (document.getElementById("makijaz").checked) {
+                    cena += 50;
+                }
+            
+            document.getElementById("wypisz").innerHTML =
+                "Cena zabiegów: " + cena + " zł";
+            }
+        </script>
+    </main>
+    <aside>
+        <img src="obraz1.jpg" class="img1" alt="Personel">
+    </aside>
+    <footer>
+        <p>Autor: 00000000000</p>
+    </footer>
+</body>
+
+</html>
